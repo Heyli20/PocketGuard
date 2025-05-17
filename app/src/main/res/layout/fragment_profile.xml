@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Fixed Title (won't scroll) -->
+    <TextView
+        android:id="@+id/profileTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/poppins_extralight"
+        android:text="@string/profile"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Logout Icon -->
+    <ImageButton
+        android:id="@+id/btnLogout"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_logout"
+        android:contentDescription="Logout"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="8dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@id/profileTitle"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Profile Photo -->
+            <ImageView
+                android:id="@+id/imgProfile"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/profilepic"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="45dp"
+                android:contentDescription="Profile Picture" />
+
+            <Button
+                android:id="@+id/btnUploadPhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/transparent"
+                android:textColor="@color/secondary"
+                android:layout_gravity="center_horizontal"
+                android:text="Upload Photo"
+                android:layout_marginTop="8dp" />
+
+            <!-- Name -->
+            <TextView
+                android:text="@string/name"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/edittext_bg"
+                android:layout_marginTop="2dp"
+                android:hint="John Doe"
+                android:padding="12dp"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName" />
+
+
+            <!-- Phone Number -->
+            <TextView
+                android:text="@string/phoneNumber"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/etPhone"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:inputType="phone"
+                android:layout_marginTop="2dp"
+                android:imeOptions="actionNext"
+                android:background="@drawable/edittext_bg"
+                android:hint="+1 234 567 890"
+                android:padding="12dp" />
+
+            <!-- Email Address -->
+            <TextView
+                android:text="@string/email"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="2dp"
+                android:imeOptions="actionDone"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/edittext_bg"
+                android:hint="you@example.com"
+                android:padding="12dp" />
+
+            <!-- Preferred Currency -->
+            <TextView
+                android:text="@string/currency"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Spinner
+                android:id="@+id/spinnerCurrency"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/spinnertext_bg"
+                android:padding="8dp" />
+
+            <!-- Save Button -->
+            <Button
+                android:id="@+id/btnSaveProfile"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Save"
+                android:layout_marginTop="28dp"
+                android:backgroundTint="@color/accent"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+

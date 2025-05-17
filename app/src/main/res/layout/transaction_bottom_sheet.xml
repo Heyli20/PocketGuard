@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/bottom_sheet_bg">
+
+    <TextView
+        android:id="@+id/tvEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Edit Transaction"
+        android:textColor="@color/edit"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingVertical="12dp" />
+
+    <TextView
+        android:id="@+id/tvDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delete Transaction"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingVertical="12dp"
+        android:textColor="@color/delete" />
+
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="secondary">#9C27B0</color>
+    <color name="accent">#4CAF50 </color>
+    <color name="cardText">#E7E2E2</color>
+    <color name="darkPurple">#800080 </color>
+    <color name="tab">#B5B9BC</color>
+    <color name="bottomSheet">#4F4E52</color>
+    <color name="edit">#35AF37</color>
+    <color name="delete">#CC0D0A</color>
+</resources>

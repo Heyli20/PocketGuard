@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/bottom_sheet_bg">
+
+    <!-- Transaction Type -->
+    <TextView
+        android:text="Transaction Type"
+        android:textColor="@color/cardText"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Spinner
+        android:id="@+id/etEditSpinnerType"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/spinnertext_bg"
+        android:padding="8dp" />
+
+    <!-- Title -->
+    <TextView
+        android:text="Title"
+        android:textColor="@color/cardText"
+        android:layout_marginTop="14dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/etEditTitle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/edittext_bg"
+        android:hint="e.g., Salary, Food"
+        android:padding="12dp"
+        android:inputType="text"
+        android:imeOptions="actionNext"
+        android:textColor="@color/cardText"
+        android:textColorHint="@color/tab"
+        android:layout_marginTop="10dp"
+        android:textSize="14sp"
+        android:fontFamily="@font/poppins" />
+
+
+    <TextView
+        android:text="Amount"
+        android:textColor="@color/cardText"
+        android:layout_marginTop="14dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/etEditAmount"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/edittext_bg"
+        android:hint="e.g., 2500"
+        android:layout_marginTop="10dp"
+        android:inputType="numberDecimal"
+        android:imeOptions="actionDone"
+        android:padding="12dp"
+        android:textColor="@color/cardText"
+        android:textColorHint="@color/tab"
+        android:textSize="14sp"
+        android:fontFamily="@font/poppins" />
+
+    <!-- Date -->
+    <TextView
+        android:text="Date"
+        android:textColor="@color/cardText"
+        android:layout_marginTop="14dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/tvEditselectedDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.6"
+            android:text="No date selected"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp"
+            android:fontFamily="@font/poppins" />
+
+        <Button
+            android:id="@+id/btnSelectDate"
+            android:layout_width="40dp"
+            android:layout_height="45dp"
+            android:layout_weight="0.4"
+            android:text="Select Date"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/accent"
+            android:textColor="@color/cardText"
+            android:fontFamily="@font/poppins"
+            android:layout_marginEnd="10dp"
+            android:elevation="6dp" />
+
+    </LinearLayout>
+
+    <!-- Category (only for Expense) -->
+    <TextView
+        android:id="@+id/tvCategoryLabel"
+        android:layout_marginTop="14dp"
+        android:text="Category"
+        android:textColor="@color/cardText"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:visibility="gone" />
+
+    <Spinner
+        android:id="@+id/etEditSpinnerCategory"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/spinnertext_bg"
+        android:padding="8dp" />
+
+
+    <Button
+        android:id="@+id/btnUpdateTransaction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update" />
+</LinearLayout>

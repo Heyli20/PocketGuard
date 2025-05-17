@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">PocketGuard</string>
+    <string name="first_onBoard">Smart Spending Starts Here</string>
+    <string name="second_onBoard">Track.Save.Succeed.</string>
+    <string name="third_onBoard">Every Penny has a Purpose.Let\'s Find it.</string>
+    <string name="fButton_oB">Get Started</string>
+    <string name="sButton_oB">Next</string>
+    <string name="tButton_oB">Let\'s Go</string>
+    <string name="titleBalance">Balance</string>
+    <string name="titleIncome">Total Income</string>
+    <string name="titleExpense">Total Expense</string>
+    <string name="transaction">Transaction</string>
+    <string name="addTransac">Add Transaction</string>
+    <string name="budget">Budget</string>
+    <string name="profile">Profile</string>
+    <string name="name">Name</string>
+    <string name="phoneNumber">Phone Number</string>
+    <string name="email">Email</string>
+    <string name="currency">Preferred Currency</string>
+    <string name="save">Save Changes</string>
+    <string name="password">Password</string>
+    <string name="conPassword">Confirm password</string>
+</resources>

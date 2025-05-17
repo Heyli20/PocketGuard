@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/nav_graph"
+            app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.pocketguard.RegisterFragment"
+        android:label="RegisterFragment" >
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.pocketguard.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_forgotPasswordFragment"
+            app:destination="@id/forgetPswFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/forgetPswFragment"
+        android:name="com.example.pocketguard.ForgetPswFragment"
+        android:label="ForgetPswFragment" >
+        <action
+            android:id="@+id/action_forgetPswFragment_to_verifyOtpFragment"
+            app:destination="@id/verifyOtpFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/verifyOtpFragment"
+        android:name="com.example.pocketguard.VerifyOtpFragment"
+        android:label="VerifyOtpFragment" >
+        <argument
+            android:name="phone"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_verifyOtpFragment_to_resetPasswordFragment"
+            app:destination="@id/resetPasswordFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/resetPasswordFragment"
+        android:name="com.example.pocketguard.ResetPasswordFragment"
+        android:label="ResetPasswordFragment" >
+        <argument
+            android:name="phone"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_resetPasswordFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+</navigation>

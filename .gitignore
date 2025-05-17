@@ -1,6 +1,7 @@
 # Gradle files
 .gradle/
 build/
+*/build/
 
 # Local configuration file (sdk path, etc)
 local.properties
@@ -13,14 +14,20 @@ captures/
 .externalNativeBuild/
 .cxx/
 *.apk
+*.ap_
+*.dex
 output.json
 
-# IntelliJ
-*.iml
+# IntelliJ IDEA / Android Studio files
 .idea/
+*.iml
+*.iws
 misc.xml
 deploymentTargetDropDown.xml
 render.experimental.xml
+
+# Kotlin/Java class files
+*.class
 
 # Keystore files
 *.jks
@@ -31,3 +38,14 @@ google-services.json
 
 # Android Profiling
 *.hprof
+
+# Others
+*.orig
+*.so
+*.jar
+
+# Mac OS files
+.DS_Store
+
+# User-specific files
+*.swp

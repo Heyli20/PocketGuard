@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/edittext_bg"
+    android:elevation="4dp"
+    android:layout_marginTop="220dp"
+    android:layout_marginStart="30dp"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:text="Verify OTP"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="OTP">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etOtp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnVerifyOtp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Verify"
+        android:backgroundTint="@color/secondary"
+        android:textColor="@color/white"
+        android:layout_marginTop="16dp"/>
+</LinearLayout>
