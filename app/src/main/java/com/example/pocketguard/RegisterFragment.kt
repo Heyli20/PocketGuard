@@ -56,20 +56,17 @@ class RegisterFragment : Fragment() {
             val confirmPassword = etConfirmPassword.text.toString()
 
             if (validateInputs(name, phone, email, password, confirmPassword)) {
-                val hashedPsw = SecurityUtils.hashPassword(password)
-                val user = User(name, phone, email, hashedPsw,"USD")
                 val sharedPrefManager = SharedPrefManager(requireContext())
-                sharedPrefManager.saveUser(user)
-                val phone = sharedPrefManager.getCurrentUserPhone()
 
-                if(sharedPrefManager.isSaved("$phone")){
+                if (sharedPrefManager.isSaved(phone)) {
+                    Toast.makeText(requireContext(), "Email or phone already exists", Toast.LENGTH_LONG).show()
+                } else {
+                    val hashedPsw = SecurityUtils.hashPassword(password)
+                    val user = User(name, phone, email, hashedPsw, "USD")
+                    sharedPrefManager.saveUser(user)
                     Toast.makeText(requireContext(), "Registration Successful!", Toast.LENGTH_SHORT).show()
-                    // Navigate to next screen (e.g., LoginFragment or Main screen)
                     findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
-                }else{
-                    Toast.makeText(requireContext(),"Email or phone already exists",Toast.LENGTH_LONG).show()
                 }
-
             }
         }
     }
